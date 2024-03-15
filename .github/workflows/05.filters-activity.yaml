@@ -6,11 +6,11 @@ on :
       - synchronize
     branches:
       - main 
-jobs
+jobs:
   echo:
      runs-on: ubuntu-latest
-    steps:
-      - run: echo "Running whenever a PR is opened or synchronised AND base branch is main"
+       steps:
+         - run: echo "Running whenever a PR is opened or synchronised AND base branch is main"
 
 
 
