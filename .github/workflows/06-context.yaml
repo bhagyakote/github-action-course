@@ -16,3 +16,6 @@ jobs:
           - name: Retrieve vraiable
             run: |
                  echo "varaible value: {{var.MY_VAR}}"
+
+
+                 
