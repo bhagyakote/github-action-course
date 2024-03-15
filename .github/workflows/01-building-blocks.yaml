@@ -2,17 +2,18 @@ name: 01 - building - blocks
 on: push
 jobs:
   echo-hello:
-    runs-on: ubuntu_latest
+    runs-on: self-hosted
     steps:
         - name: say hello
           run: echo "hello word"
   echo-goodbye:
     runs-on: ubuntu_latest
     steps:
-        - name: failed step
+        - name: failed step  
           run: |
-          echo "I will succeed"
-          exit 0
-        - name: goodbye
-          run: echo "Goodbye"
 
+            echo "will succeed"
+            exit 0
+        - name: say goodbye
+          run: echo "goodbye"
+          
