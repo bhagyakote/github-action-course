@@ -1,0 +1,18 @@
+name: 06-context
+on: 
+ push:
+jobs:
+  echo-test: 
+       runs-on: ubuntu-latest
+       steps:
+          - name: display information
+            run: |
+               echo "Event Name: ${{github.event_name}}"
+               echo "Ref: ${{goithub.ref}} "
+               echo "SHA: ${{github.sha}}"
+               echo "RUN ID: ${{github.run}}"
+               echo "Workflow: ${{github.workflow}}"
+
+          - name: Retrieve vraiable
+              run: |
+              echo "varaible value: {{var.MY_VAR}}"
