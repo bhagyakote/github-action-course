@@ -4,10 +4,17 @@ jobs:
   build:
      runs-on: ubuntu-latest
      steps:
-      - name: checkout cpde
+      - name: checkout code
         uses: actions/checkout@v4
-      - name: printing folders
-        run: ls
+      # - name: printing folders
+      #   run: ls
+      - name: Setup NOde
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+      - name: Install Dependemncies
+        run: npm ci
+        
         
      #0.Checkout the code from repo
      #Install deps of our react application
