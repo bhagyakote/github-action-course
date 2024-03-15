@@ -18,7 +18,7 @@ jobs:
 
           
   mac_echo:
-     runs-on: mac-latest
+     runs-on: macos-latest
      steps:
       - name: show os
         run: |
