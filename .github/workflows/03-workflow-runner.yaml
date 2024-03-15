@@ -15,3 +15,12 @@ jobs:
         run: |
           echo "THis jib is running on windows runner."
           echo "Runner OS: $RUNNER_OS"
+
+          
+  mac_echo:
+     runs-on: mac-latest
+     steps:
+      - name: show os
+        run: |
+          echo "THis jib is running on windows runner."
+          echo "Runner OS: $RUNNER_OS"
