@@ -1,7 +1,7 @@
 name: 07 - using expressions
 on:
   push:
-  workflow dispatch:
+  workflow_dispatch:
 jobs:
    echo: 
        runs-on: ubuntu_latest
