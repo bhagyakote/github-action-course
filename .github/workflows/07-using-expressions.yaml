@@ -6,9 +6,9 @@ jobs:
    echo: 
        runs-on: ubuntu_latest
        steps:
-          - name: "[debug] print startup data
-            if: ${{inputs.debug}}
-            run: |
+          - name: "[debug] print startup data"
+            if: ${{ inputs.debug }}
+              run: |
                echo "Triggered by: ${{github.event_name}}" 
                echo "Branch: ${{github.ref}}"
                echo "commit SHA: ${{runner.os}} "
