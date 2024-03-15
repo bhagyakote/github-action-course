@@ -14,5 +14,5 @@ jobs:
                echo "Workflow: ${{github.workflow}}"
 
           - name: Retrieve vraiable
-              run: |
+            run: |
                  echo "varaible value: {{var.MY_VAR}}"
