@@ -1,6 +1,6 @@
 name: 06-context
 on: 
- push:
+  push:
 jobs:
   echo-test: 
        runs-on: ubuntu-latest
@@ -15,4 +15,4 @@ jobs:
 
           - name: Retrieve vraiable
               run: |
-              echo "varaible value: {{var.MY_VAR}}"
+                 echo "varaible value: {{var.MY_VAR}}"
