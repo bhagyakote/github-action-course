@@ -13,8 +13,8 @@ jobs:
              step_var: "I am a step env var"
              step_var2: "I am another step variable"
              run: |
-                echo "step env var:{{env.step_var}}  
-                echo "step env var:{{env.job_var}}  
+                echo "step env var:${{env.step_var}}  
+                echo "step env var:${{env.job_var}}  
             
             
            
