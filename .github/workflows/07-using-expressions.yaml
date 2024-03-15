@@ -8,15 +8,15 @@ jobs:
        steps:
           - name: "[debug] print startup data"
             if: ${{ inputs.debug }}
-              run: |
+            run: |
                echo "Triggered by: ${{github.event_name}}" 
                echo "Branch: ${{github.ref}}"
                echo "commit SHA: ${{runner.os}} "
 
-            -name: '[debug] print when triggered from main'
+          - name: '[debug] print when triggered from main'
             if: ${{inputs.debug && github.ref == 'refs/heads/main' }}
             run: echo "I was triggered from main"
-            -name: GReeting
+          - name: GReeting
             run: echo "Hello world"
 
 
