@@ -6,6 +6,8 @@ jobs:
   echo1:
      runs-on: self-hosted
      steps: 
+        - name: sleeping foe 20 seconds
+          run: sleep 20
         - name: failing steps
           run: exit 1 
         - name: I will be skipped 
