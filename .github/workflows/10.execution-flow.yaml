@@ -1,0 +1,51 @@
+name: 10 Controlling the execution flow
+on: 
+  workflow_dispatch:
+    inputs:
+      pass-unit-tests:
+       type: boolean
+       description: whether unit test will run or not
+       default: true
+       
+jobs:
+  lint-build:
+      runs-on: self-hosted
+      steps:
+       - name: lint and build
+         run: echo "running and building"
+           # npm run lint
+           # npm run build
+           # npm run tsc:check
+           # npm run format:check
+         
+  unit-tests:
+      runs-on: self-hosted
+      steps:
+      - name: Running unit tests
+        run: echo "Runnings test..."
+      - name: failing steps 
+        if: ${{!inputs.pass-unit-tests}
+        run: exit1 
+  deploy-nonprod:
+      runs-on: self-hosted
+      needs:
+          - lint-build
+          - unit-tests
+      steps:
+      - name: Deploying to non prod
+        run: echo "Deploying to non prod"
+  e2e-tests:
+      runs-on: self-hosted
+      needs:
+      - deploy-nonprod
+      steps:
+       -name: running E2-E tests
+        run: echo "Running e2e tests"
+  deploy-prod:
+      runs-on: self-hosted
+      needs:
+      - deploy-nonprod
+      steps: 
+       -name: Running load tests
+        run: echo "Running load tests"
+        
