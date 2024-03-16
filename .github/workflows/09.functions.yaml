@@ -6,6 +6,14 @@ jobs:
   echo1:
      runs-on: self-hosted
      steps: 
+        - name: print pR title
+          run: echo "${{github.event.pull_request.title}}"
+        - name: print pr labels
+          run: |
+             cat <<EOF
+             ${{ toJSON(github.event.pull_request.labels) }}
+        - name: BUg step
+          if: ${{cancelled()&& contains (github.event.pull_request.labels, 'fix')
         - name: sleeping foe 20 seconds
           run: sleep 20
         - name: failing steps
