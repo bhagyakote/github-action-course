@@ -10,6 +10,8 @@ jobs:
           run: exit 1 
         - name: I will be skipped 
           if: ${{success()}}
+
+          
           run: echo" I will print if prev stepssucceed"
         - name: I will execute
           if: ${{failure()}}
