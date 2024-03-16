@@ -1,0 +1,19 @@
+name: 12-working with outputs
+on:
+  workflow_dispatch:
+  
+jobs:
+ build:
+  runs-on: self-hosted
+  outputs: 
+    buils-status: ${{steps.build.output.status}}
+  steps:
+    -name: build
+     id: build
+     run: echo "status=success" >> "$GITHUB_OUTPUT"
+     deploy:
+       runs-on: self-hosted
+       
+      
+     
+   
