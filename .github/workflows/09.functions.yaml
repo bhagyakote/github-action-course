@@ -4,7 +4,7 @@ on:
   push:
 jobs:
   echo1:
-     runs-on: ubuntu_latest
+     runs-on: self-hosted
      steps: 
         - name: failing steps
           run: exit 1 
