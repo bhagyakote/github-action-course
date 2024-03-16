@@ -1,6 +1,8 @@
 name: 11-working with inputs  
 on:
+  push:
   workflow_dispatch:
+  
    inputs:
       dry-run:
          type: boolean
