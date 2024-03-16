@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
    inputs:
       dry-run:
-        type: boolean
+         type: boolean
          description: skip deployment and only print build output
          default: false  
       target:
@@ -16,8 +16,8 @@ on:
          - v1
          - v2
          - v3
-        default: v3
-      description: Release from which to deploy
+       default: v3
+       description: Release from which to deploy
         
 jobs:
   build:
