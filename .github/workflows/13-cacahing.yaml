@@ -1,6 +1,6 @@
 name: 13- using caching
 on: 
-  workflow dispatch:
+  workflow_dispatch:
       inputs:
           use cache:
               description: Whether to execute cache step
@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     runs-on: self-hosted
-      defaults:
+    defaults:
          run:
            working-directory: 13-caching/react-app
          # 1-chacekout the code
@@ -18,12 +18,12 @@ jobs:
          # 3-LInting ,formatting,unit testing,building
          # 4- deploy to non prod
               
-      steps:
+    steps:
      - name: chcekout code
        uses: actions/chcekout@v4
      - name: setup node
        uses: actions/setup-node@v3
-       with
+       with:
         node-version: '20.x'
      - name: install dependencies
        run: npm ci
