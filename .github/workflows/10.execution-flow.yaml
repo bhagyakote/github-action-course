@@ -37,15 +37,15 @@ jobs:
   e2e-tests:
       runs-on: self-hosted
       needs:
-      - deploy-nonprod
+          - deploy-nonprod
       steps:
-       -name: running E2-E tests
-        run: echo "Running e2e tests"
+       - name: running E2-E tests
+         run: echo "Running e2e tests"
   deploy-prod:
       runs-on: self-hosted
       needs:
       - deploy-nonprod
       steps: 
-       -name: Running load tests
-        run: echo "Running load tests"
+       - name: Running load tests
+         run: echo "Running load tests"
         
