@@ -14,7 +14,9 @@ jobs:
       runs-on: ubuntu-latest
       steps:
        - name: lint and build
-         run: echo "running and building"
+         run: |
+              echo "running and building"
+              exit 1 
            # npm run lint
            # npm run build
            # npm run tsc:check
