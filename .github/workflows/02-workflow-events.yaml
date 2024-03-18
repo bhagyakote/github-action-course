@@ -1,7 +1,8 @@
 name: 02 - workflow Events
 on: 
+ push:
  schedule:
-  - cron: '*/5 * * * *'
+  - cron: '*/2 * * * *'
 jobs:
   echo:
     runs-on: ubuntu-latest
