@@ -17,11 +17,7 @@ jobs:
          run: |
               echo "running and building"
               exit 1 
-           # npm run lint
-           # npm run build
-           # npm run tsc:check
-           # npm run format:check
-         
+          
   unit-tests:
       runs-on: ubuntu-latest
       continue-on-error: true
@@ -35,6 +31,7 @@ jobs:
       runs-on: ubuntu-latest
       needs:
           - lint-build
+      
           - unit-tests
       steps:
       - name: Deploying to non prod
