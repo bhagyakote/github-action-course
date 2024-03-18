@@ -2,13 +2,18 @@ name: 02 - workflow Events
 on: 
 
  schedule:
-  - cron: '*/5 * * * *'
+  - cron: '*/2 * * * *'
 jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
         - name: show the trigger
           run: echo "I am trigerred by an ${{github.event_name}} event." 
+
+
+
+
+          
 
           
           
