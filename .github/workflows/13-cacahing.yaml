@@ -2,14 +2,14 @@ name: 13- using caching
 on: 
   workflow_dispatch:
       inputs:
-          use cache:
+          use-cache:
               description: Whether to execute cache step
               type: boolean
               default: true
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     defaults:
          run:
            working-directory: 13-caching/react-app
@@ -32,7 +32,7 @@ jobs:
        working-directory: 13-caching/react-app
      - name: building
        run: npm run build
-     - name: DEploy to a non prod environment
+     - name: Deploy to a non prod environment
        run: echo "deploying to non prod"
 
 
