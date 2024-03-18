@@ -27,7 +27,7 @@ jobs:
          # 4- deploy to non prod
               
     steps:
-     - name: chcekout code
+     - name: checkout code
        uses: actions/chcekout@v4
      - name: setup node
        uses: actions/setup-node@v3
