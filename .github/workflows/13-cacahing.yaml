@@ -28,7 +28,7 @@ jobs:
               
     steps:
      - name: checkout code
-       uses: actions/chcekout@v4
+       uses: actions/checkout@v4
      - name: setup node
        uses: actions/setup-node@v3
        with:
