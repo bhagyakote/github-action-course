@@ -1,30 +1,24 @@
-name: 03 - workflow Runners
-# on: push
-jobs: 
-  ubuntu-echo: 
-   runs-on: ubuntu-latest    
-   steps:
-      - name: show OS 
-        run: |
-            echo "This is runnimg on ubuntu-runner"
-            echo "Runner OS: $RUNNER_OS"
-  windows_echo:
-     runs-on: windows-latest
-     steps:
-      - name: show os
-        run: |
-          echo "THis jib is running on windows runner."
-          echo "Runner OS: $RUNNER_OS"
+name: 03-workflow-runner
+on: 
+  push:
+jobs:
+   Linux-runner: 
+            runs-on: self-hosted
+            steps:
+             - name: show runners
+               run: echo "I am running "$RUNNER_OS" runner"
 
-          
-  mac_echo:
-     runs-on: macos-latest
-     steps:
-      - name: show os
-        run: |
-          echo "THis jib is running on windows runner."
-          echo "Runner OS: $RUNNER_OS"
-
-
+   windows-runner:
+            runs-on: windows-latest
+            
+            steps:
+              - name: show OS
+                shell: bash
+                run: echo "I am running on "$RUNNER_OS" runner"
+   macos-runner:
+            runs-on: mac-os latest
+            steps:
+              - name: show OS
+                run: echo "I am running on "$RUNNER_OS" runner"
 
 
