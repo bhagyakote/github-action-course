@@ -33,7 +33,7 @@ jobs:
        uses: actions/setup-node@v3
        with:
         node-version: ${{inputs.node-version}}
-     - name: Download caching dependencies 
+     - name: Download cached dependencies 
        uses: actions/cache@v3
        if: ${{inputs.use-cahe}}
        id: cache
