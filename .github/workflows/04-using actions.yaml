@@ -16,9 +16,7 @@ jobs:
         run: npm ci
         working-directory: Usig actions/react-app
         
-     #0.Checkout the code from repo
-     #Install deps of our react application
-     #2.Executae automated tests
+     
      
 
 
