@@ -4,6 +4,7 @@ on:
   workflow_call:
      inputs: 
         target-directory:
+           
              type: string
              required: true
      outputs:
@@ -18,7 +19,7 @@ on:
 
 jobs:
    deploy:
-      runs-on: ubuntu-latest
+      runs-on: self-hosted
       outputs: 
           build-status: ${{steps.build.outputs.build-status}}
           url: ${{steps.deploy.outputs.outputs.url}}
