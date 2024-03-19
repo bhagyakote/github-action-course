@@ -21,7 +21,7 @@ jobs:
       runs-on: ubuntu-latest
       outputs: 
           build-status: ${{steps.build.outputs.build-status}}
-          url: ${{steps.deploy.outputs.build-status}}
+          url: ${{steps.deploy.outputs.outputs.url}}
       steps: 
          - name: Checkout repo
            uses: actions/checkout@v4
