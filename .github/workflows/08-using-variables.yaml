@@ -17,11 +17,11 @@ jobs:
              STEP_VAR: "I am a step env var"
              step_var2: "I am another step env variable"
            run: |
-                echo "step env var: ${{env.STEP_VAR}}  
+                echo "step env var: ${{env.STEP_VAR}}"  
                 echo "Step env var 2:$step_var2"
-                echo "step env var: ${{env.JOB_VAR}}  
-                echo " workflow env var: ${{env.WORKFLOW_VAR}}
-                echo: "overwritten: ${{env.OVERWRITTEN}}"
+                echo "step env var: ${{env.JOB_VAR}}"  
+                echo " workflow env var: ${{env.WORKFLOW_VAR}}"
+                echo "overwritten: ${{env.OVERWRITTEN}}"
          - name: Overwrite the job variable
            env: 
               OVERWRITTEN: "I have been overwritten at the step level"
