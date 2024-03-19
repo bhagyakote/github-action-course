@@ -3,13 +3,14 @@ on:
   push:
   workflow_dispatch:
 jobs:
-  deploy: 
+  some-job: 
+  
     uses: ./.github/workflows/18-1-resusable-workflows.yaml
     with: 
       target-directory: dummy-dir
   prints-outputs: 
      runs-on: ubuntu-latest
-     needs: deploy
+     needs: some-job
      steps: 
       - name: print outputs
         run: |
