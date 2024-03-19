@@ -17,11 +17,11 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     defaults:
          run:
            working-directory: 13-caching/react-app
-         # 1-chacekout the code
+         # 1-checkout the code
          # 2-install dependencies
          # 3-LInting ,formatting,unit testing,building
          # 4- deploy to non prod
