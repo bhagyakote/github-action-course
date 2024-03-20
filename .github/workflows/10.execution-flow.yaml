@@ -1,9 +1,9 @@
 name: 10 Controlling the execution flow
-# Using on-prem runners#
+#Running with self-hosted runners#
 on: 
   # push:
-  repository_dispatch:
-   types:   [child.yaml]
+  # repository_dispatch:
+  #  types:   [child.yaml]
   
   workflow_dispatch:
     inputs:
@@ -15,7 +15,7 @@ on:
 jobs:
 
   lint-build:
-      runs-on: ubuntu-latest
+      runs-on: self-hosted
       needs: []
       steps:
        - name: lint and build
@@ -24,7 +24,7 @@ jobs:
               
           
   unit-tests:
-      runs-on: ubuntu-latest
+      runs-on: self-hosted
       continue-on-error: true
       steps:
       - name: Running unit tests
@@ -42,7 +42,7 @@ jobs:
         run: echo "Deploying to non prod"
   
   e2e-tests:
-      runs-on: ubuntu-latest
+      runs-on: self-hosted
       needs:
          - deploy-nonprod
             
