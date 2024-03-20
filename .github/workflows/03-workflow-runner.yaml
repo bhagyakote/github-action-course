@@ -2,7 +2,7 @@ name: 03-workflow-runner
 on: 
   push:
   repository_dispatch:
-   types:   [20- using variables]
+   types:   [10 Controlling the execution flow]
   
 jobs:
 
