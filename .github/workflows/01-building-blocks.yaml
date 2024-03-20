@@ -2,7 +2,7 @@ name: 01 - building - blocks
 on: push
 jobs:
   echo-hello:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
         - name: say hello
           run: echo "hello word"
@@ -17,3 +17,5 @@ jobs:
         - name: say goodbye
           run: echo "goodbye"
           
+
+
