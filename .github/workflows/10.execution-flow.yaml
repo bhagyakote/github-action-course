@@ -1,7 +1,7 @@
 name: 10 Controlling the execution flow
-#Executing all jobs parallel way#
+#Executing jobs parallel way#
 on: 
-  push:
+  # push:
   workflow_dispatch:
     inputs:
       pass-unit-tests:
