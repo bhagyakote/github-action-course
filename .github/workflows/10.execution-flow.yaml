@@ -1,5 +1,5 @@
 name: 10 Controlling the execution flow
-#Executing parent-child pipeline#
+# Using on-prem runners#
 on: 
   # push:
   repository_dispatch:
@@ -41,10 +41,27 @@ jobs:
       - name: Deploying to non prod
         run: echo "Deploying to non prod"
   
+  e2e-tests:
+      runs-on: ubuntu-latest
+      needs:
+         - deploy-nonprod
+            
+      steps:
+       - name: running E2-E tests
+         run: echo "Running e2e tests"
+  deploy-prod:
+      runs-on: ubuntu-latest
+      needs:  
+          - deploy-nonprod
+      steps: 
+       - name: Running load tests
+         run: echo "Running load tests"
 
 
 
          
+
+
 
 
 
