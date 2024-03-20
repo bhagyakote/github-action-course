@@ -13,7 +13,7 @@ jobs:
           run: |
 
             echo "will succeed"
-            exit 0
+            exit 1
         - name: say goodbye
           run: echo "goodbye"
           
