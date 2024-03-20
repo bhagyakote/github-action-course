@@ -1,7 +1,10 @@
 name: 10 Controlling the execution flow
-#Executing jobs parallel way#
+
 on: 
   # push:
+  repository_dispatch:
+   types:   [child.yaml]
+  
   workflow_dispatch:
     inputs:
       pass-unit-tests:
