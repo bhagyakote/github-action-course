@@ -2,7 +2,7 @@ name: 03-workflow-runner
 on: 
   push:
   repository_dispatch:
-   types:   [08- using variables]
+   types:   [20- using variables]
   
 jobs:
 
@@ -26,6 +26,8 @@ jobs:
                 run: echo "I am running on "$RUNNER_OS" runner"
 
                 
+
+
 
 
 
