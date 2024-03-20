@@ -33,7 +33,7 @@ jobs:
         if: ${{!inputs.pass-unit-tests}}
         run: exit 1 
   deploy-nonprod:
-      runs-on: ubuntu-latest
+      runs-on: self-hosted
       needs:
          - lint-build
         
@@ -50,7 +50,7 @@ jobs:
        - name: running E2-E tests
          run: echo "Running e2e tests"
   deploy-prod:
-      runs-on: ubuntu-latest
+      runs-on: self-hosted
       needs:  
           - deploy-nonprod
       steps: 
