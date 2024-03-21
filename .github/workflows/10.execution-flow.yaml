@@ -43,16 +43,16 @@ jobs:
   
   e2e-tests:
       runs-on: self-hosted
-      needs:
-         []
+    
+        
             
       steps:
        - name: running E2-E tests
          run: echo "Running e2e tests"
   deploy-prod:
       runs-on: self-hosted
-      needs:  
-           []
+    
+      
       steps: 
        - name: Running load tests
          run: echo "Running load tests"
