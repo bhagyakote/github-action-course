@@ -44,7 +44,7 @@ jobs:
   e2e-tests:
       runs-on: self-hosted
       needs:
-         - deploy-nonprod
+         []
             
       steps:
        - name: running E2-E tests
@@ -52,7 +52,7 @@ jobs:
   deploy-prod:
       runs-on: self-hosted
       needs:  
-          - deploy-nonprod
+           []
       steps: 
        - name: Running load tests
          run: echo "Running load tests"
