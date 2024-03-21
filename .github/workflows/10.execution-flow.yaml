@@ -1,5 +1,5 @@
 name: 10 Controlling the execution flow
-#Running with self-hosted runners#
+#Executing YAML with on-prem runners#
 on: 
   # push:
   # repository_dispatch:
