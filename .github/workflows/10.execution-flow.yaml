@@ -16,7 +16,7 @@ jobs:
 
   lint-build:
       runs-on: self-hosted
-      needs: []
+     
       steps:
        - name: lint and build
          run: |
