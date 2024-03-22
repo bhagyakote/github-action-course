@@ -1,6 +1,7 @@
 name: 16-woring with environments
 run-name: 16-working wirh environments | env - $ {{inputs.target-env}}
-on: workflow_dispatch
+on: 
+ workflow_dispatch:
   inputs:
     target_env:
       type: environment
